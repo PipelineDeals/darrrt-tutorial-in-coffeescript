@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app>
+<html ng-app="pirateBadge">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,12 +15,17 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body>
+  <body ng-controller="BadgesController">
     <h1>Pirate badge</h1>
 
     <div class="widgets">
       <div>
         <input ng-model="name" maxlength="15" type="text" id="inputName">
+      </div>
+      <div>
+        <button ng-click="generateName()" ng-disabled="inputIsNotEmpty()">
+          {{label()}}
+        </button>
       </div>
     </div>
     <div class="badge">
