@@ -28,23 +28,19 @@
         </button>
       </div>
     </div>
-    <div class="badge">
-      <div class="greeting">
-        Arrr! Me name is
-      </div>
-      <div class="name">
-        <span id="badgeName" ng-cloak>{{name}}</span>
-      </div>
-    </div>
+    <badge name="{{name}}"></badge>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
     <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/json3/lib/json3.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
+        <script src="scripts/directives/badge.js"></script>
         <!-- endbuild -->
 </body>
 </html>
